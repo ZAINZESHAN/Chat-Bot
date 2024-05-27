@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <form>
+                <div>
+                    <ul id="list"></ul>
+                </div>
+                <div class="display">
+                    <input id="inputField" type="text" placeholder="0" name="display">
+                </div>
+                <div>
+                    <input type="button" value="AC" class="color" onclick="inputField.value = '' ">
+                    <input type="button" value="DE" class="color" onclick="inputField.value = inputField.value.toString().slice(0,-1)">
+                    <input type="button" value="%" class="color" onclick="inputField.value += '%' ">
+                    <input type="button" value="÷" class="color" onclick="inputField.value += '/' ">
+                </div>
+                <div>
+                    <input type="button" value="7" onclick="inputField.value += '7' ">
+                    <input type="button" value="8" onclick="inputField.value += '8' ">
+                    <input type="button" value="9" onclick="inputField.value += '9' ">
+                    <input type="button" value="x" class="color" onclick="inputField.value += '*' ">
+                </div>
+                <div>
+                    <input type="button" value="4" onclick="inputField.value += '4' ">
+                    <input type="button" value="5" onclick="inputField.value += '5' ">
+                    <input type="button" value="6" onclick="inputField.value += '6' ">
+                    <input type="button" value="-" class="color" onclick="inputField.value += '-' ">
+                </div>
+                <div>
+                    <input type="button" value="1" onclick="inputField.value += '1' ">
+                    <input type="button" value="2" onclick="inputField.value += '2' ">
+                    <input type="button" value="3" onclick="inputField.value += '3' ">
+                    <input type="button" value="+" class="color" onclick="inputField.value += '+' ">
+                </div>
+                <div>
+                    <input type="button" value="00" onclick="inputField.value += '00' ">
+                    <input type="button" value="0" onclick="inputField.value += '0' ">
+                    <input type="button" value="." onclick="inputField.value += '.' ">
+                    <input type="button" value="=" class="equal" onclick="calculate()">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
